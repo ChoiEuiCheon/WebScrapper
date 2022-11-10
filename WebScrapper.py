@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 
-
 def extract_jobs(term):
   url = f"https://remoteok.com/remote-{term}-jobs"
   request = requests.get(url, headers={"User-Agent": "Kimchi"})
@@ -26,7 +25,7 @@ def extract_jobs(term):
   else:
     print("Can't get jobs.")
   return results
-
-
+  
 jobs = extract_jobs(input("Input Job What you want! : "))
 print(jobs)
+
